@@ -7,19 +7,23 @@ public class OperacaoBancaria {
 		Conta destino = new Conta();
 		Conta origem = new Conta();
 		
-		destino.titular = "Tio Patinhas";
-		destino.numero = 001;
-		destino.saldo = 1000000000;
-		destino.limite = 1000000000;
+		destino.setTitular("Tio Patinhas");
+		destino.setNumero(001);
+		destino.setSaldo(900000000);
+		destino.setLimite(900000000);
 		
-		System.out.printf("o saldo da conta do %s tem: R$ %.2f", destino.titular, destino.saldo);
+		System.out.printf("o saldo da conta do %s tem: R$ %.2f", destino.getTitular(), destino.getSaldo());
 		
-		origem.titular = "Darth Vader";
-		origem.numero = 001;
-		origem.saldo = 200;
-		origem.limite = 100;
+		origem.setTitular("Darth Vader");
+		origem.setNumero(002);
+		origem.setSaldo(200);;
+		origem.setLimite(100);
 		
-		origem.transferir(destino, 200);
+		destino.transferir(origem, 8000);
+		
+		System.out.println("\nSaldo da pessoa que você enviou: " + origem.getSaldo());
+		
+		
 
 	}
 

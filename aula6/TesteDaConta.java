@@ -16,20 +16,20 @@ public class TesteDaConta {
 												//adicona a variavel a memoria
 		
 		System.out.print("Digite um nome: ");
-		minhaConta.titular = ler.nextLine();
+		minhaConta.setTitular(ler.nextLine());
 		
 		System.out.print("Digite o seu saldo: ");
-		minhaConta.saldo = ler.nextDouble();
+		minhaConta.setSaldo(ler.nextDouble());
 		
 		System.out.print("Digite o seu limite: ");
-		minhaConta.limite = ler.nextDouble();
+		minhaConta.setLimite(ler.nextDouble());
 		
 		System.out.print("Digite o seu numero: ");
-		minhaConta.numero = ler.nextInt();
+		minhaConta.setNumero(ler.nextInt());
 		
 		System.out.print("Informações do Usuario: " + "\nNome: "
-		+ minhaConta.titular + "\nNumero: " + minhaConta.numero 
-		+ "\nSaldo: R$" + minhaConta.saldo + "\nLimite: R$" + minhaConta.limite);
+		+ minhaConta.getTitular() + "\nNumero: " + minhaConta.getNumero() 
+		+ "\nSaldo: R$" + minhaConta.getSaldo() + "\nLimite: R$" + minhaConta.getLimite());
 		
 		System.out.println("\nGostaria de:" + "\n[1] - Sacar" + "\n[2] - Depositar" + "\n[3] - Transferir");
 		int esc = ler.nextInt();
@@ -54,17 +54,17 @@ public class TesteDaConta {
 				qnt = ler.nextDouble();
 				minhaConta.transferir(destino, qnt);
 				
-				System.out.println("Saldo da pessoa que você enviou: " + destino.saldo);
+				System.out.println("Saldo da pessoa que você enviou: " + destino.getSaldo());
 				
 				break;
 		
 			default:
 				System.out.println("Invalido!!");
-				System.out.println("Seu saldo não mudou!");
+				System.out.println("Seu saldo não mudou!6tf");
 				break;
 		}
 		
-		System.out.println("Saldo atual: " + minhaConta.saldo);
+		System.out.println("Saldo atual: " + minhaConta.getSaldo());
 		
 		
 		
